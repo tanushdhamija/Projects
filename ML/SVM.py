@@ -14,7 +14,7 @@ cancer = datasets.load_breast_cancer() #cancer dataset from sklearn
 X = cancer.data
 y = cancer.target
 
-x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, test_size = 0.1)
+x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, test_size = 0.2)
 
 classes = ['malignant' , 'benign']
 

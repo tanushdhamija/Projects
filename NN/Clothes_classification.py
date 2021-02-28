@@ -14,7 +14,7 @@ train_images = train_images / 255.0
 test_images = test_images / 255.0
 
 def visualize_input(train_images, train_labels):
-    plt.figure(figsize=(10,10))
+    plt.figure(figsize=(8,8))
     for i in range(25):
         plt.subplot(5,5,i+1)
         plt.xticks([])
@@ -38,7 +38,8 @@ predictions = model.predict(test_images)
 plt.figure(figsize=(5,5))
 r = np.random.randint(0,100)
 for i in range(5):
-    plt.grid(False)
+    plt.xticks([])
+    plt.yticks([])
     plt.imshow(test_images[i*r], cmap=plt.cm.binary)
     plt.xlabel("Actual : " + class_names[test_labels[i*r]])
     plt.title("Prediction : " + class_names[np.argmax(predictions[i*r])])
