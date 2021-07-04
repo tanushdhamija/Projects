@@ -62,7 +62,7 @@ plt.xlabel('Number of iterations')
 plt.ylabel('Loss')
 plt.title('Loss Function')
 plt.plot(x, losses)
-plt.show()
+#plt.show()
 
 estimate = h(X,theta)
 
